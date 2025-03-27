@@ -205,3 +205,14 @@ list.c:110:8: note: declared here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 673164a
+Thu, Mar 27, 2025  7:14:41 PM: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+list.c: In function 'popCurrent':
+list.c:127:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4975334
