@@ -37,7 +37,7 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    
+    list->current = list->head;
     return list->current;
 }
 
@@ -57,7 +57,7 @@ void * prevList(List * list) {
 
 void pushFront(List * list, void * data) {
     Node* Nodo = (Node*)malloc(sizeof(Node));
-    Nodo->data = *data;
+    Nodo->data = data;
     if (list->head == NULL){
         list->head = Nodo;
     }else{
