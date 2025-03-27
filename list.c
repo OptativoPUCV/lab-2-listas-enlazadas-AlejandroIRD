@@ -112,6 +112,7 @@ void * popCurrent(List * list) {
     Node* izq = list->current->prev;
     Node* der = list->current->next;
     Node* Eliminar = list->current;
+    void* dato = Eliminar->data;
     if (izq != NULL){
         izq->next = der;
     } else{
@@ -124,6 +125,7 @@ void * popCurrent(List * list) {
     }
     list->current = der;
     free(Eliminar);
+    return dato;
 }
 
 void cleanList(List * list) {
