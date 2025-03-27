@@ -59,12 +59,14 @@ void * lastList(List * list) {
 }
 
 void * prevList(List * list) {
-    return NULL;
+    if (list->current == NULL) return NULL;
+    list->current = list->current->prev;
+    if (list->current == NULL) return NULL;
+    return list->current;
 }
 
 void pushFront(List * list, void * data) {
-    Node* Nodo = (Node*)malloc(sizeof(Node));
-    Nodo->data = data;
+    Node* Nodo = createNode(data);
     if (list->head == NULL){
         list->head = Nodo;
     }else{
