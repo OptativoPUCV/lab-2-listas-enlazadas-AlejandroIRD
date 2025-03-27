@@ -37,11 +37,14 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    return NULL;
+    
+    return list->current;
 }
 
 void * nextList(List * list) {
-    return NULL;
+    if (list->current == NULL) return NULL;
+    list->current = list->current->next;
+    return list->current;
 }
 
 void * lastList(List * list) {
@@ -53,6 +56,15 @@ void * prevList(List * list) {
 }
 
 void pushFront(List * list, void * data) {
+    Node* Nodo = (Node*)malloc(sizeof(Node));
+    Nodo->data = *data;
+    if (list->head == NULL){
+        list->head = Nodo;
+    }else{
+        Nodo->prev = NULL;
+        Nodo->next = list->head;
+        list->head = Nodo;
+    }
 }
 
 void pushBack(List * list, void * data) {

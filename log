@@ -25,3 +25,17 @@ Thu, Mar 27, 2025 12:06:46 PM:
  tests:  1|5
 total_score: 10/70
 dc75bca
+Thu, Mar 27, 2025 12:30:15 PM: 
+ list.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+list.c: In function 'pushFront':
+list.c:60:18: error: dereferencing 'void *' pointer [-Werror]
+     Nodo->data = *data;
+                  ^~~~~
+list.c:60:16: error: void value not ignored as it ought to be
+     Nodo->data = *data;
+                ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+19b6aa1
