@@ -129,3 +129,17 @@ Thu, Mar 27, 2025  6:29:38 PM:
  tests:  9|3
 total_score: 35/70
 12e2149
+Thu, Mar 27, 2025  6:33:07 PM: 
+ list.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:0:
+list.c: In function 'pushFront':
+list.c:70:30: error: 'return' with a value, in function returning void [-Werror]
+     if (Nodo == NULL) return NULL;
+                              ^~~~
+list.c:68:6: note: declared here
+ void pushFront(List * list, void * data) {
+      ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+e98534a
